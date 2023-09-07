@@ -14,9 +14,7 @@ const sdk = new ThirdwebSDK(CoreBlockchain, {
 
 
 export default function MyApp({
-  Component: Component,
   pageProps: { ...pageProps },
-  NextNProgress: NextNProgress
 }) {
   return(
     <>

@@ -7,12 +7,12 @@ import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    
     <ThirdwebProvider
       clientId="65a85b91315ca838d7a8472fb0e64f92"
       activeChain={NETWORK}
     >
-      {/* Progress bar when navigating between pages */}
+
       <NextNProgress
         color="orange"
         startPosition={0.3}
@@ -21,12 +21,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         showOnShallow={true}
       />
 
-      {/* Render the navigation menu above each component */}
+
       <Navbar />
-      {/* Render the actual component (page) */}
+
+      
       <Component {...pageProps} />
     </ThirdwebProvider>
-    </>
   );
 }
 

@@ -52,12 +52,12 @@ const Home: NextPage = () => {
                 >
                   Whalecards are Pass To Whaleverse
                 </Link>{" "}
-               You can trade them on now on our own NFT Marketplace
+               You can trade them now on Whales NFT Marketplace
               </p>
 
               <div className={styles.heroCtaContainer}>
                 <Link className={styles.heroCta} href="http://stake.borewhalesyachtclub.org/mint">
-                  Mint WhaleCards.
+                  Mint WhaleCards
                 </Link>
                 <Link
                   className={styles.secondaryCta}

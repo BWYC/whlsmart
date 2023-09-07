@@ -32,13 +32,15 @@ export default function Buy() {
             backgroundRepeat: "no-repeat"
           }}
         />
-      <h1 style={{fontFamily: "monospace"}}>Buy and Sell Whalecards🎴</h1>
+      <h1 style={{fontFamily: "monospace"}}>Volume: 0 CORE</h1>
+      <h2 style={{fontFamily: "monospace"}}>FLOOR: 0.7 CORE</h2>
       <p style={{fontFamily: "monospace"}}>Mint or Unstake WhaleCards To Trade</p>
+      <hr></hr>
       <NFTGrid
         data={data}
         isLoading={isLoading}
         emptyText={
-          "Looks like there are no NFTs in this collection. Did you import your contract on the thirdweb dashboard? https://thirdweb.com/dashboard"
+          "Looks like There are no Cards here."
         }
       />
     </Container>

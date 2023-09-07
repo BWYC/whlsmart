@@ -22,7 +22,7 @@ export default function NFTGrid({
   return (
     <div className={styles.nftGridContainer} style={{marginTop: "1%", fontFamily: "monospace"}}>
       {isLoading ? (
-        [...Array(20)].map((_, index) => (
+        [...Array(100)].map((_, index) => (
           <div key={index} className={styles.nftContainer}>
             <Skeleton key={index} width={"100%"} height="312px" />
           </div>

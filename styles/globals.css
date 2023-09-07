@@ -15,7 +15,11 @@ html {
 
 body {
   color: #ffffff;
-  background: #202223;
+  background-image: radial-gradient(
+              circle at center,
+              rgba(0, 17, 253, 0.763) 0%,
+              rgba(13, 24, 34, 0.86) 42%
+            );
   --color-primary: #fada3f;
   --color-secondary: #ff2136;
   --color-tertiary: #0294fe;
@@ -29,6 +33,8 @@ h1 {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.5;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
 }
 
 h3 {
@@ -36,9 +42,13 @@ h3 {
   line-height: 28px;
   font-weight: 700;
   margin-bottom: 0px;
+  font-family: monospace;
+  font-weight: bolder;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
 }

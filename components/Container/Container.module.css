@@ -5,6 +5,7 @@
   padding-left: 1rem;
   padding-right: 1rem;
   margin-top: 96px;
+  height: max-content;
 }
 
 .xs {

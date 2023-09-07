@@ -32,13 +32,13 @@ export function Navbar() {
 
         <div className={styles.navRight}>
           <div className={styles.navConnect}>
-            <ConnectWallet theme="dark" btnTitle="Connect Wallet" />
+            <ConnectWallet theme="light" btnTitle="Connect Wallet" style={{background: "transparent", color: "white", border: "solid", borderColor: "orange"}} />
           </div>
           {address && (
             <Link className={styles.link} href={`/profile/${address}`}>
               <Image
                 className={styles.profileImage}
-                src="/user-icon.png"
+                src="/user.png"
                 width={42}
                 height={42}
                 alt="Profile"

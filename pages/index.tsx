@@ -61,7 +61,7 @@ const Home: NextPage = () => {
                 </Link>
                 <Link
                   className={styles.secondaryCta}
-                  href="/buy"
+                  href="/sell"
                   target="_blank"
                 >
                   Trade WhaleCards

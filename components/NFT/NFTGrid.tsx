@@ -20,14 +20,14 @@ export default function NFTGrid({
   emptyText = "No NFTs found for this collection.",
 }: Props) {
   return (
-    <div className={styles.nftGridContainer} style={{marginTop: "1%", fontFamily: "monospace"}}>
+    <div className={styles.nftGridContainer}>
       {isLoading ? (
-        [...Array(100)].map((_, index) => (
+        [...Array(20)].map((_, index) => (
           <div key={index} className={styles.nftContainer}>
             <Skeleton key={index} width={"100%"} height="312px" />
           </div>
         ))
-      ) : data && data.length > 0npm ? (
+      ) : data && data.length > 0 ? (
         data.map((nft) =>
           !overrideOnclickBehavior ? (
             <Link

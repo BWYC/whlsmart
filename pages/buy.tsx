@@ -20,7 +20,8 @@ export default function Buy() {
             backgroundImage: "url('https://bafybeicogcrq4qh24igi4z64y6ddnfpasr2yibey3jsoefvkor3577u6mu.ipfs.nftstorage.link/ipfs/bafybeicogcrq4qh24igi4z64y6ddnfpasr2yibey3jsoefvkor3577u6mu/whales.png')",
             backgroundPosition: "center",
             backgroundSize: "100%",
-            backgroundRepeat: "no-repeat"
+            backgroundRepeat: "no-repeat",
+            WebkitBackgroundSize: "cover"
           }}
         />
         <div
@@ -32,9 +33,10 @@ export default function Buy() {
             backgroundRepeat: "no-repeat"
           }}
         />
+           <p style={{fontFamily: "monospace", fontSize: "18px"}}>16 Locations across whaleverse, The pyramids, the Hot Burning Lava from the past, Blazing sands of Egypt and The Mutant City. Travel accros this mysterious locations and cross-chains to worlds unkown</p>
       <h1 style={{fontFamily: "monospace"}}>Volume: 0 CORE</h1>
-      <h2 style={{fontFamily: "monospace"}}>FLOOR: 0.7 CORE</h2>
-      <p style={{fontFamily: "monospace"}}>Mint or Unstake WhaleCards To Trade</p>
+      <h2 style={{fontFamily: "monospace", fontSize: "18px"}}>FLOOR: 0 CORE</h2>
+   
       <hr></hr>
       <NFTGrid
         data={data}

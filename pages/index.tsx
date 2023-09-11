@@ -56,12 +56,12 @@ const Home: NextPage = () => {
               </p>
 
               <div className={styles.heroCtaContainer}>
-                <Link className={styles.heroCta} href="http://stake.boredwhalesyachtclub.org/mint">
+                <Link className={styles.heroCta} href="http://boredwhalesyachtclub.org/login#mint">
                   Mint WhaleCards
                 </Link>
                 <Link
                   className={styles.secondaryCta}
-                  href="/sell"
+                  href="/buy"
                   target="_blank"
                 >
                   Trade WhaleCards

@@ -27,7 +27,7 @@ export default function NFTGrid({
             <Skeleton key={index} width={"100%"} height="312px" />
           </div>
         ))
-      ) : data && data.length > 0 ? (
+      ) : data && data.length > 0npm ? (
         data.map((nft) =>
           !overrideOnclickBehavior ? (
             <Link

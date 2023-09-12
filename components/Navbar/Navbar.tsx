@@ -25,10 +25,16 @@ export function Navbar() {
 
           <div className={styles.navMiddle}>
             <Link href="/buy" className={styles.link}>
-              BUY
+              BUY🟢
             </Link>
             <Link href="/sell" className={styles.link}>
-              SELL
+              SELL🔴
+            </Link>
+            <Link href="https://stake.boredwhalesyachtclub.org" className={styles.link}>
+              STAKE🟡
+            </Link>
+            <Link href="/" className={styles.link}>
+              BURN🔥
             </Link>
           </div>
         </div>
@@ -46,6 +52,7 @@ export function Navbar() {
                 height={42}
                 alt="Profile"
               />
+              <p>Whale</p>
             </Link>
           )}
         </div>

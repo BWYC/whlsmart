@@ -59,7 +59,7 @@ export default function ProfilePage() {
           style={{
             backgroundImage: "url('https://bafybeicogcrq4qh24igi4z64y6ddnfpasr2yibey3jsoefvkor3577u6mu.ipfs.nftstorage.link/ipfs/bafybeicogcrq4qh24igi4z64y6ddnfpasr2yibey3jsoefvkor3577u6mu/whales.png')",
             backgroundPosition: "center",
-            backgroundSize: "100%",
+            backgroundSize: "cover",
             backgroundRepeat: "no-repeat"
           }}
         />

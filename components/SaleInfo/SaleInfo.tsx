@@ -35,7 +35,7 @@ type DirectFormData = {
   nftContractAddress: string;
   tokenId: string;
   price: string;
-  startDate: Date;
+  startDate: Number;
   endDate: Date;
 };
 
@@ -109,7 +109,7 @@ export default function SaleInfo({ nft }: Props) {
       defaultValues: {
         nftContractAddress: NFT_COLLECTION_ADDRESS,
         tokenId: nft.metadata.id,
-        startDate: new Date(),
+        startDate: Date.now(),
         endDate: new Date(),
         price: "0",
       },
@@ -135,7 +135,6 @@ export default function SaleInfo({ nft }: Props) {
       assetContractAddress: data.nftContractAddress,
       tokenId: data.tokenId,
       pricePerToken: data.price,
-      startTimestamp: new Date(data.startDate),
       endTimestamp: new Date(data.endDate),
     });
 
@@ -175,16 +174,10 @@ export default function SaleInfo({ nft }: Props) {
           <h4 className={styles.formSectionTitle}>When </h4>
 
           {/* Input field for auction start date */}
-          <legend className={styles.legend}> Listing Starts on </legend>
-          <input
-            className={styles.input}
-            type="datetime-local"
-            {...registerDirect("startDate")}
-            aria-label="Auction Start Date"
-          />
+
 
           {/* Input field for auction end date */}
-          <legend className={styles.legend}> Listing Ends on </legend>
+          <legend className={styles.legend}> Listing End Date! </legend>
           <input
             className={styles.input}
             type="datetime-local"

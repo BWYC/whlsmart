@@ -1,7 +1,7 @@
 .nftGridContainer {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   height: auto;
   gap: 1%;
   width: 100%;

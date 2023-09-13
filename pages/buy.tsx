@@ -10,8 +10,10 @@ import styles from "../styles/Profile.module.css";
 export default function Buy() {
   // Load all of the NFTs from the NFT Collection
   const { contract } = useContract(NFT_COLLECTION_ADDRESS);
-  const { data, isLoading } = useNFTs(contract);
-
+    const { data: data, isLoading: isLoading } = useNFTs(contract, {
+      start: 1,
+      count: 804,
+    });
   return (
     <Container maxWidth="lg">
    <div

@@ -12,6 +12,7 @@ import {
 } from "../../const/contractAddresses";
 import Skeleton from "../Skeleton/Skeleton";
 import styles from "./NFT.module.css";
+import truncateEthAddress from "truncate-eth-address";
 
 type Props = {
   nft: NFT;
@@ -36,12 +37,13 @@ export default function NFTComponent({ nft }: Props) {
       tokenContract: NFT_COLLECTION_ADDRESS,
       tokenId: nft.metadata.id,
     });
+    const owner = nft.owner as string;
 
   return (
     <>
       <ThirdwebNftMedia metadata={nft.metadata} className={styles.nftImage} />
 
-      <p className={styles.nftTokenId}>Token ID #{nft.metadata.id}</p>
+      <p className={styles.nftName}>🐋 Whale: {truncateEthAddress(owner)}</p>
       <p className={styles.nftName}>{nft.metadata.name}</p>
 
       <div className={styles.priceContainer}>

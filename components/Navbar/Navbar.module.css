@@ -7,7 +7,7 @@
   top: 0px;
   left: 0px;
   z-index: 3;
-  background-color: #00000050;
+  background-color: #00000047;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
@@ -26,6 +26,7 @@
   max-width: 1260px;
   background-color: transparent !important;
   border-bottom: 2px;
+  border-top: 0px !important; 
   border-style: solid;
   border-radius: 16px;
   margin-top: 20px;

@@ -13,6 +13,7 @@ import {
 import Skeleton from "../Skeleton/Skeleton";
 import styles from "./NFT.module.css";
 import truncateEthAddress from "truncate-eth-address";
+import Image from "next/image";
 
 type Props = {
   nft: NFT;
@@ -55,7 +56,7 @@ export default function NFTComponent({ nft }: Props) {
               <p className={styles.nftPriceLabel}>Price</p>
               <p className={styles.nftPriceValue}>
                 {`${directListing[0]?.currencyValuePerToken.displayValue}
-          ${directListing[0]?.currencyValuePerToken.symbol}`}
+          ${directListing[0]?.currencyValuePerToken.symbol}`}{""}<Image alt="logo" src="./core" height={15} width={15} />
               </p>
             </div>
           </div>

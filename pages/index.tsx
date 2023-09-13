@@ -13,11 +13,13 @@ const Home: NextPage = () => {
     <>
   
     <div className={styles.container}>
+   
       <div className={styles.content}>
         <div className={styles.hero}>
           <div className={styles.heroBackground}>
           
           </div>
+       
           <div className={styles.heroAssetFrame}>
             <Image
               src="/hero1.png"
@@ -38,7 +40,7 @@ const Home: NextPage = () => {
             />
           </div>
           <div className={styles.heroBodyContainer}>
-            <Buy />
+          
             <div className={styles.heroBody}>
               <h1 className={styles.heroTitle}>
                 <span className={styles.heroTitleGradient}>
@@ -70,12 +72,13 @@ const Home: NextPage = () => {
                   Trade WhaleCards
                 </Link>
               </div>
-              <Buy />
             </div>
           </div>
         </div>
       </div>
+    
     </div>
+      <Buy />
     </>
   );
 };

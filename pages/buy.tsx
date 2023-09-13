@@ -12,7 +12,7 @@ export default function Buy() {
   const { contract } = useContract(NFT_COLLECTION_ADDRESS);
     const { data: data, isLoading: isLoading } = useNFTs(contract, {
       start: 1,
-      count: 804,
+      count: 600,
     });
   return (
     <Container maxWidth="lg">
@@ -47,6 +47,7 @@ export default function Buy() {
           "Looks like There are no Cards here."
         }
       />
+
     </Container>
   );
 }

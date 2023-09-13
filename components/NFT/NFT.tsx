@@ -43,7 +43,7 @@ export default function NFTComponent({ nft }: Props) {
     <>
       <ThirdwebNftMedia metadata={nft.metadata} className={styles.nftImage} />
 
-      <p className={styles.nftName}>🐋 Whale: {truncateEthAddress(owner)}</p>
+      <p className={styles.nftName}>Card 🎴{nft.metadata.id}: {truncateEthAddress(owner)}</p>
       <p className={styles.nftName}>{nft.metadata.name}</p>
 
       <div className={styles.priceContainer}>

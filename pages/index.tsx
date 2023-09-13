@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Buy  from "./buy"
 
 /**
  * Landing page with a simple gradient background and a hero asset.
@@ -37,6 +38,7 @@ const Home: NextPage = () => {
             />
           </div>
           <div className={styles.heroBodyContainer}>
+            <Buy />
             <div className={styles.heroBody}>
               <h1 className={styles.heroTitle}>
                 <span className={styles.heroTitleGradient}>
@@ -68,6 +70,7 @@ const Home: NextPage = () => {
                   Trade WhaleCards
                 </Link>
               </div>
+              <Buy />
             </div>
           </div>
         </div>

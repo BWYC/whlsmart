@@ -25,7 +25,7 @@ type Props = {
 type AuctionFormData = {
   nftContractAddress: string;
   tokenId: string;
-  startDate: Date;
+  startDate: Number;
   endDate: Date;
   floorPrice: string;
   buyoutPrice: string;
@@ -122,7 +122,7 @@ export default function SaleInfo({ nft }: Props) {
       tokenId: data.tokenId,
       buyoutBidAmount: data.buyoutPrice,
       minimumBidAmount: data.floorPrice,
-      startTimestamp: new Date(data.startDate),
+      startTimestamp: Date.now(),
       endTimestamp: new Date(data.endDate),
     });
 
@@ -235,12 +235,6 @@ export default function SaleInfo({ nft }: Props) {
 
           {/* Input field for auction start date */}
           <legend className={styles.legend}> Auction Starts on </legend>
-          <input
-            className={styles.input}
-            type="datetime-local"
-            {...registerAuction("startDate")}
-            aria-label="Auction Start Date"
-          />
 
           {/* Input field for auction end date */}
           <legend className={styles.legend}> Auction Ends on </legend>

@@ -78,3 +78,19 @@
   border: 0px;
   color: #ffc400;
 }
+
+.nftPriceValue1 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+  font-family: inherit;
+  vertical-align: inherit;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bolder;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  color: #003cff;
+}

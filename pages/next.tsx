@@ -5,24 +5,22 @@ import NFTGrid from "../components/NFT/NFTGrid";
 import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
 import ProfilePage  from "../pages/profile/[address]"
 import styles from "../styles/Profile.module.css";
-import { Link } from "web3uikit";
 
 
 export default function Buy() {
   // Load all of the NFTs from the NFT Collection
   const { contract } = useContract(NFT_COLLECTION_ADDRESS);
     const { data: data, isLoading: isLoading } = useNFTs(contract, {
-      start: 550,
-      count: 600,
+      start: 600,
+      count: 700,
     });
 
 if (isLoading) {
   return(
     <div style={{
-      marginTop: "20%",
-      width: "100%",
-      marginLeft: "10%",
-      marginBottom: "10%"
+      marginTop: "5%",
+      marginLeft: "5%",
+      width: "100%"
     }}>THE OCEAN🌊 LOADING.....</div>
   )
 }
@@ -49,6 +47,7 @@ if (isLoading) {
           }}
         />
            <p style={{fontFamily: "monospace", fontSize: "18px"}}>16 Locations across whaleverse, The pyramids, the Hot Burning Lava from the past, Blazing sands of Egypt and The Mutant City. Travel accros this mysterious locations and cross-chains to worlds unkown</p>
+
    
       <hr></hr>
       <NFTGrid
@@ -59,7 +58,7 @@ if (isLoading) {
         }
       />
       <div  style={{height: "50px"}}></div>
-      <div><a href="/next" style={{fontFamily: "monospace", fontSize: "20px", marginTop: "-10%", background: "black", color: "white"}}>NEXT PAGE</a></div>
+      <div><a href="/next1" style={{fontFamily: "monospace", fontSize: "20px", marginTop: "-10%", background: "black", color: "white"}}>NEXT PAGE</a></div>
       <hr></hr>
       <div  style={{height: "50px"}}></div>
     </Container>

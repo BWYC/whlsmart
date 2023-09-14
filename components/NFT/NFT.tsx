@@ -54,7 +54,7 @@ export default function NFTComponent({ nft }: Props) {
           <div className={styles.nftPriceContainer}>
             <div>
               <p className={styles.nftPriceLabel}>Price</p>
-              <p className={styles.nftPriceValue}>
+              <p className={styles.nftPriceValue1}>
                 {`${directListing[0]?.currencyValuePerToken.displayValue}
           ${directListing[0]?.currencyValuePerToken.symbol}`}{""}
               </p>
@@ -64,7 +64,7 @@ export default function NFTComponent({ nft }: Props) {
           <div className={styles.nftPriceContainer}>
             <div>
               <p className={styles.nftPriceLabel}>Minimum Bid</p>
-              <p className={styles.nftPriceValue}>
+              <p className={styles.nftPriceValue1}>
                 {`${auctionListing[0]?.minimumBidCurrencyValue.displayValue}
           ${auctionListing[0]?.minimumBidCurrencyValue.symbol}`}
               </p>

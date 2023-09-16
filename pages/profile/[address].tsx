@@ -17,7 +17,6 @@ import {
 import styles from "../../styles/Profile.module.css";
 import randomColor from "../../util/randomColor";
 
-
 const [randomColor1, randomColor2, randomColor3, randomColor4] = [
   randomColor(),
   randomColor(),
@@ -33,12 +32,12 @@ export default function ProfilePage() {
 
   const { contract: marketplace } = useContract(
     MARKETPLACE_ADDRESS,
-    "marketplace-v3"
+    "marketplace-v3",
   );
 
-  const { data: ownedNfts, isLoading: loadingOwnedNfts } = useOwnedNFTs(
+  const { data: ownedNfts, isLoading: isLoading } = useOwnedNFTs(
     nftCollection,
-    router.query.address as string
+    router.query.address as string,
   );
 
   const { data: directListings, isLoading: loadingDirects } =
@@ -51,29 +50,47 @@ export default function ProfilePage() {
       seller: router.query.address as string,
     });
 
+  if (isLoading) {
+    return (
+      <div
+        style={{
+          marginTop: "50%",
+          width: "100%",
+          marginLeft: "10%",
+          marginBottom: "10%",
+        }}
+      >
+        THE OCEAN🌊 LOADING...
+      </div>
+    );
+  }
+
   return (
     <Container maxWidth="lg">
       <div className={styles.profileHeader}>
         <div
           className={styles.coverImage}
           style={{
-            backgroundImage: "url('https://bafybeicogcrq4qh24igi4z64y6ddnfpasr2yibey3jsoefvkor3577u6mu.ipfs.nftstorage.link/ipfs/bafybeicogcrq4qh24igi4z64y6ddnfpasr2yibey3jsoefvkor3577u6mu/whales.png')",
+            backgroundImage:
+              "url('https://bafybeicogcrq4qh24igi4z64y6ddnfpasr2yibey3jsoefvkor3577u6mu.ipfs.nftstorage.link/ipfs/bafybeicogcrq4qh24igi4z64y6ddnfpasr2yibey3jsoefvkor3577u6mu/whales.png')",
             backgroundPosition: "center",
             backgroundSize: "cover",
-            backgroundRepeat: "no-repeat"
+            backgroundRepeat: "no-repeat",
           }}
         />
         <div
           className={styles.profilePicture}
           style={{
-            backgroundImage: "url('https://bafybeifugm2das3zddsxkgz2h6xuztdmvsqsv4bisvplnmqu57ehwponcy.ipfs.nftstorage.link/favicon.png')",
+            backgroundImage:
+              "url('https://bafybeifugm2das3zddsxkgz2h6xuztdmvsqsv4bisvplnmqu57ehwponcy.ipfs.nftstorage.link/favicon.png')",
             backgroundPosition: "center",
-             backgroundSize: "100%",
-            backgroundRepeat: "no-repeat"
+            backgroundSize: "100%",
+            backgroundRepeat: "no-repeat",
           }}
         />
         <h1 className={styles.profileName}>
-        Whale: {router.query.address ? (
+          Whale:{" "}
+          {router.query.address ? (
             router.query.address.toString().substring(0, 4) +
             "..." +
             router.query.address.toString().substring(38, 42)
@@ -114,7 +131,7 @@ export default function ProfilePage() {
       >
         <NFTGrid
           data={ownedNfts}
-          isLoading={loadingOwnedNfts}
+          isLoading={isLoading}
           emptyText="Looks like you don't have any NFTs from this collection. Head to the buy page to buy some!"
         />
       </div>

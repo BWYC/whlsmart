@@ -25,7 +25,7 @@ export default function Buy() {
           marginBottom: "10%",
         }}
       >
-        THE OCEAN🌊 LOADING.....
+        THE OCEAN🌊 LOADING...
       </div>
     );
   }
@@ -77,7 +77,7 @@ export default function Buy() {
             color: "white",
           }}
         >
-          NEXT PAGE
+          <p> NEXT PAGE </p>
         </Link>
       </div>
       <hr></hr>

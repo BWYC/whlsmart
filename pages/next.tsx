@@ -5,6 +5,7 @@ import NFTGrid from "../components/NFT/NFTGrid";
 import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
 import ProfilePage from "../pages/profile/[address]";
 import styles from "../styles/Profile.module.css";
+import Link from "next/link";
 
 export default function Buy() {
   // Load all of the NFTs from the NFT Collection
@@ -65,7 +66,7 @@ export default function Buy() {
       />
       <div style={{ height: "50px" }}></div>
       <div>
-        <a
+        <Link
           href="/next1"
           style={{
             fontFamily: "monospace",
@@ -76,7 +77,7 @@ export default function Buy() {
           }}
         >
           NEXT PAGE
-        </a>
+        </Link>
       </div>
       <hr></hr>
       <div style={{ height: "50px" }}></div>

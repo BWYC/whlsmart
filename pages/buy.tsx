@@ -67,7 +67,7 @@ export default function Buy() {
       />
       <div style={{ height: "50px" }}></div>
       <div>
-        <a
+        <Link
           href="/next"
           style={{
             fontFamily: "monospace",
@@ -78,7 +78,7 @@ export default function Buy() {
           }}
         >
           NEXT PAGE
-        </a>
+        </Link>
       </div>
       <hr></hr>
       <div style={{ height: "50px" }}></div>

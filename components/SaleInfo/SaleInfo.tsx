@@ -44,7 +44,7 @@ export default function SaleInfo({ nft }: Props) {
   // Connect to marketplace contract
   const { contract: marketplace } = useContract(
     MARKETPLACE_ADDRESS,
-    "marketplace-v3"
+    "marketplace-v3",
   );
 
   // useContract is a React hook that returns an object with the contract key.
@@ -175,7 +175,6 @@ export default function SaleInfo({ nft }: Props) {
 
           {/* Input field for auction start date */}
 
-
           {/* Input field for auction end date */}
           <legend className={styles.legend}> Listing End Date! </legend>
           <input
@@ -214,7 +213,7 @@ export default function SaleInfo({ nft }: Props) {
                 position: "bottom-center",
               });
               router.push(
-                `/token/${NFT_COLLECTION_ADDRESS}/${nft.metadata.id}`
+                `/token/${NFT_COLLECTION_ADDRESS}/${nft.metadata.id}`,
               );
             }}
           >
@@ -234,7 +233,6 @@ export default function SaleInfo({ nft }: Props) {
           <h4 className={styles.formSectionTitle}>When </h4>
 
           {/* Input field for auction start date */}
-          <legend className={styles.legend}> Auction Starts on </legend>
 
           {/* Input field for auction end date */}
           <legend className={styles.legend}> Auction Ends on </legend>
@@ -283,7 +281,7 @@ export default function SaleInfo({ nft }: Props) {
                 position: "bottom-center",
               });
               router.push(
-                `/token/${NFT_COLLECTION_ADDRESS}/${nft.metadata.id}`
+                `/token/${NFT_COLLECTION_ADDRESS}/${nft.metadata.id}`,
               );
             }}
           >

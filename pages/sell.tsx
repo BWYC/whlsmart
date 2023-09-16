@@ -22,7 +22,9 @@ export default function Sell() {
 
   if (isLoading) {
     return (
-      <div style={{ marginTop: "20%", fontFamily: "monospace" }}>
+      <div
+        style={{ marginTop: "20%", marginLeft: "10%", fontFamily: "monospace" }}
+      >
         LOADING WHALECARDS....
       </div>
     );
@@ -30,7 +32,7 @@ export default function Sell() {
 
   return (
     <Container maxWidth="lg">
-      <h1 style={{ marginTop: "20%", fontFamily: "monospace" }}>
+      <h1 style={{ marginTop: "40%", fontFamily: "monospace" }}>
         Sell WhaleCards You Own
       </h1>
       {!selectedNft ? (

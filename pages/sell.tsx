@@ -20,14 +20,25 @@ export default function Sell() {
 
   const [selectedNft, setSelectedNft] = useState<NFTType>();
 
+  if (isLoading) {
+    return (
+      <div style={{ marginTop: "20%", fontFamily: "monospace" }}>
+        LOADING WHALECARDS....
+      </div>
+    );
+  }
+
   return (
     <Container maxWidth="lg">
-      <h1 style={{marginTop: "10%", fontFamily: "monospace"}}>Sell WhaleCards You Own</h1>
+      <h1 style={{ marginTop: "20%", fontFamily: "monospace" }}>
+        Sell WhaleCards You Own
+      </h1>
       {!selectedNft ? (
         <>
-          <p style={{marginTop: "1%", fontFamily: "monospace"}}>Select which NFT you&rsquo;d like to sell below.</p>
+          <p style={{ marginTop: "1%", fontFamily: "monospace" }}>
+            Select which NFT you&rsquo;d like to sell below.
+          </p>
           <NFTGrid
-          
             data={data}
             isLoading={isLoading}
             overrideOnclickBehavior={(nft) => {

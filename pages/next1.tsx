@@ -18,7 +18,7 @@ export default function Buy() {
     return (
       <div
         style={{
-          marginTop: "5%",
+          marginTop: "30%",
           marginLeft: "5%",
           width: "100%",
         }}

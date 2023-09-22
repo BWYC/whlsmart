@@ -5,14 +5,14 @@ import NFTGrid from "../components/NFT/NFTGrid";
 import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
 import ProfilePage from "../pages/profile/[address]";
 import styles from "../styles/Profile.module.css";
-import { Link } from "web3uikit";
+import Link from "next/link";
 
 export default function Buy() {
   // Load all of the NFTs from the NFT Collection
   const { contract } = useContract(NFT_COLLECTION_ADDRESS);
   const { data: data, isLoading: isLoading } = useNFTs(contract, {
-    start: 1,
-    count: 400,
+    start: 900,
+    count: 800,
   });
 
   if (isLoading) {
@@ -66,20 +66,11 @@ export default function Buy() {
         emptyText={"Looks like There are no Cards here."}
       />
       <div style={{ height: "50px" }}></div>
-      <div>
-        <Link
-          href="/next"
-          style={{
-            fontFamily: "monospace",
-            fontSize: "20px",
-            marginTop: "-10%",
-            background: "black",
-            color: "white",
-          }}
-        >
-          <p> NEXT PAGE </p>
-        </Link>
-      </div>
+
+      <Link href="/next">
+        <h4>NEXT PAGE</h4>
+      </Link>
+
       <hr></hr>
       <div style={{ height: "50px" }}></div>
     </Container>

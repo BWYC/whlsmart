@@ -14,7 +14,6 @@ import Skeleton from "../Skeleton/Skeleton";
 import styles from "./NFT.module.css";
 import truncateEthAddress from "truncate-eth-address";
 
-
 type Props = {
   nft: NFT;
 };
@@ -22,7 +21,7 @@ type Props = {
 export default function NFTComponent({ nft }: Props) {
   const { contract: marketplace, isLoading: loadingContract } = useContract(
     MARKETPLACE_ADDRESS,
-    "marketplace-v3"
+    "marketplace-v3",
   );
 
   // 1. Load if the NFT is for direct listing
@@ -38,13 +37,15 @@ export default function NFTComponent({ nft }: Props) {
       tokenContract: NFT_COLLECTION_ADDRESS,
       tokenId: nft.metadata.id,
     });
-    const owner = nft.owner as string;
+  const owner = nft.owner as string;
 
   return (
     <>
       <ThirdwebNftMedia metadata={nft.metadata} className={styles.nftImage} />
 
-      <p className={styles.nftName}>🎴{nft.metadata.id}: {truncateEthAddress(owner)}</p>
+      <p className={styles.nftName}>
+        🎴{nft.metadata.id}: {truncateEthAddress(owner)}
+      </p>
       <p className={styles.nftName}>{nft.metadata.name}</p>
 
       <div className={styles.priceContainer}>
@@ -56,7 +57,8 @@ export default function NFTComponent({ nft }: Props) {
               <p className={styles.nftPriceLabel}>Price</p>
               <p className={styles.nftPriceValue1}>
                 {`${directListing[0]?.currencyValuePerToken.displayValue}
-          ${directListing[0]?.currencyValuePerToken.symbol}`}{""}
+          ${directListing[0]?.currencyValuePerToken.symbol}`}
+                {""}
               </p>
             </div>
           </div>
@@ -74,7 +76,7 @@ export default function NFTComponent({ nft }: Props) {
           <div className={styles.nftPriceContainer}>
             <div>
               <p className={styles.nftPriceLabel}>Price</p>
-              <p className={styles.nftPriceValue}>Not for sale</p>
+              <p className={styles.nftPriceValue}>Locked/Not SOLD</p>
             </div>
           </div>
         )}

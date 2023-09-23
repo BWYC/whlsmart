@@ -56,7 +56,7 @@ const Home: NextPage = () => {
                 <div className={styles.heroCtaContainer}>
                   <Link
                     className={styles.heroCta}
-                    href="http://boredwhalesyachtclub.org/login#mint"
+                    href="http://boredwhalesyachtclub.org/#mint"
                   >
                     Mint WhaleCards
                   </Link>

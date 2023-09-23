@@ -11,8 +11,8 @@ export default function Buy() {
   // Load all of the NFTs from the NFT Collection
   const { contract } = useContract(NFT_COLLECTION_ADDRESS);
   const { data: data, isLoading: isLoading } = useNFTs(contract, {
-    start: 900,
-    count: 800,
+    start: 0,
+    count: 200,
   });
 
   if (isLoading) {

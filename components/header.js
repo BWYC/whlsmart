@@ -6,13 +6,12 @@ import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
 import { useAddress } from "@thirdweb-dev/react";
 import {useTheme} from "next-themes";
-import Logo from "../public/logo.png";
+import Logo from "../public/favicon.ico";
 import { ConnectWallet } from "@thirdweb-dev/react"
 import { Button } from "web3uikit";
 import ReactThemeToggleButton from "./toggle"
 import HeroSection from "./heroSection";
 import AirdropPopUp from "./airdropPopUp";
-import axios from "axios";
 import Link from "next/link";
 import { Arrow, Checkmark } from "@web3uikit/icons";
 import BAYC from "../public/rare.png";
@@ -52,27 +51,6 @@ const GlobalStyle = createGlobalStyle`
 export default function Header() {
   const [oneDayTradingVolume, setOneDayTradingVolume] = useState("");
 
-  useEffect(() => {
-    const yesterday = new Date(new Date().getTime() - 24 * 60 * 60 * 1000);
-    const getNftData = async () => {
-      const response = await axios.get("http://localhost:5001/getnftdata", {
-        params: {
-          contractAddress: "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D",
-        },
-      });
-
-      let tradingVolume = 0;
-
-      response.data.result.map((sale) => {
-        if (sale.block_timestamp > yesterday.toISOString()) {
-          return (tradingVolume += sale.price / 10 ** 18);
-        }
-      });
-      setOneDayTradingVolume(tradingVolume);
-    };
-
-    getNftData();
-  });
 
   const address = useAddress()
   const { connect, connectors } = useConnect();
@@ -106,9 +84,9 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
     <section className={styles.header} id="header">
       <section className={styles.logo}>
         <Link href="/">
-        <Image src={Logo} alt="Logo" width="70" height="" style={{border: "solid", borderRadius: "100%", borderWidth: "0.5px"}} />
+        <Image src={Logo} alt="Logo" width="80" height=""  />
         </Link>
-       <Link href="/"> <h3 style={{color: "white", textShadow: "red 0px 1px 3px, yellow 1px 3px 0px, green 3px 0px 0px"}}>RAREBAY.XYZ</h3></Link><div style={{borderRight: "solid", borderRightWidth: "0.5px", width: "25px", height: "25px", color: ""}}></div>
+       <Link href="/"> <h3 style={{color: "white", textShadow: "initial 0px 2px 2px, lightblue 0px 2px 0px, black 1px 4px 0px"}}>RAREBAY.XYZ</h3></Link><div style={{borderRight: "solid", borderRightWidth: "0.5px", width: "25px", height: "25px", color: ""}}></div>
       </section>
       <section className={styles.nav}>
         <section className={styles.nav_items}>
@@ -197,8 +175,9 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
     </>
   );
 }
-
-window.onscroll = function() {scrollFunction()};
+/**
+ * 
+ * window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -207,3 +186,5 @@ function scrollFunction() {
     document.getElementById("header").style.borderBottom = "none";
   }
 }
+ */
+

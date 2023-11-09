@@ -23,9 +23,10 @@ export default function Buy() {
           width: "100%",
           marginLeft: "10%",
           marginBottom: "10%",
+          textAlign: "center"
         }}
       >
-        THE OCEAN🌊 LOADING...
+        PLEASE WAIT, LOADING ITEMS...
       </div>
     );
   }
@@ -68,7 +69,7 @@ export default function Buy() {
       <div style={{ height: "50px" }}></div>
 
       <Link href="/next">
-        <h4>NEXT PAGE</h4>
+        <h4>1 / 2</h4>
       </Link>
 
       <hr></hr>

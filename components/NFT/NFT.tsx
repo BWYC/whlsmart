@@ -41,46 +41,11 @@ export default function NFTComponent({ nft }: Props) {
 
   return (
     <>
-      <ThirdwebNftMedia metadata={nft.metadata} className={styles.nftImage} />
+      <ThirdwebNftMedia metadata={nft.metadata} style={{width: "100%", height: "auto", borderRadius: "16px"}} />
 
       <p className={styles.nftName}>
-        🎴{nft.metadata.id}: {truncateEthAddress(owner)}
+        {nft.metadata.id}: {truncateEthAddress(owner)}
       </p>
-      <p className={styles.nftName}>{nft.metadata.name}</p>
-
-      <div className={styles.priceContainer}>
-        {loadingContract || loadingDirect || loadingAuction ? (
-          <Skeleton width="100%" height="100%" />
-        ) : directListing && directListing[0] ? (
-          <div className={styles.nftPriceContainer}>
-            <div>
-              <p className={styles.nftPriceLabel}>Price</p>
-              <p className={styles.nftPriceValue1}>
-                {`${directListing[0]?.currencyValuePerToken.displayValue}
-          ${directListing[0]?.currencyValuePerToken.symbol}`}
-                {""}
-              </p>
-            </div>
-          </div>
-        ) : auctionListing && auctionListing[0] ? (
-          <div className={styles.nftPriceContainer}>
-            <div>
-              <p className={styles.nftPriceLabel}>Minimum Bid</p>
-              <p className={styles.nftPriceValue1}>
-                {`${auctionListing[0]?.minimumBidCurrencyValue.displayValue}
-          ${auctionListing[0]?.minimumBidCurrencyValue.symbol}`}
-              </p>
-            </div>
-          </div>
-        ) : (
-          <div className={styles.nftPriceContainer}>
-            <div>
-              <p className={styles.nftPriceLabel}>Price</p>
-              <p className={styles.nftPriceValue}>Locked/Not SOLD</p>
-            </div>
-          </div>
-        )}
-      </div>
     </>
   );
 }

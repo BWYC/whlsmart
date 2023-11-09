@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: row;
   gap: 32px;
-  margin-top: 50%;
+  padding: 100px;
 }
 
 .metadataContainer {
@@ -136,7 +136,7 @@
 }
 
 .label {
-  color: rgba(255, 255, 255, 0.6);
+  color: initial;
   margin: 0px;
   margin-bottom: 4px;
 }
@@ -144,7 +144,7 @@
 .nftOwnerAddress {
   font-weight: 600;
   margin: 0px;
-  color: rgba(255, 255, 255, 0.9);
+  color:initial;
 }
 
 .descriptionContainer {
@@ -193,13 +193,13 @@
 .traitValue {
   font-weight: 600;
   margin: 0px;
-  color: rgba(255, 255, 255, 0.9);
+  color: initial;
 }
 
 .traitName {
   font-weight: 400;
   margin: 0px;
-  color: rgba(255, 255, 255, 0.6);
+  color: initial;
 }
 
 .eventContainer {
@@ -241,7 +241,7 @@
   font-size: 18px;
   line-height: 24px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: initial;
   margin: 0px;
   border-radius: 8px;
 }
@@ -263,7 +263,7 @@
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.6);
+  color: initial;
   margin: 0px;
 }
 

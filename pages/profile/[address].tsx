@@ -54,18 +54,18 @@ export default function ProfilePage() {
     return (
       <div
         style={{
-          marginTop: "50%",
-          width: "100%",
-          marginLeft: "10%",
-          marginBottom: "10%",
+alignItems: "center",
+padding: "30%",
+textAlign: "center"
         }}
       >
-        THE OCEAN🌊 LOADING...
+        LOADING...
       </div>
     );
   }
 
   return (
+    <>
     <Container maxWidth="lg">
       <div className={styles.profileHeader}>
         <div
@@ -168,5 +168,6 @@ export default function ProfilePage() {
         )}
       </div>
     </Container>
+    </>
   );
 }
